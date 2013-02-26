@@ -1,7 +1,6 @@
 #include <iostream>
 #include <cstdlib>
 #include <sstream>
-#include <vector>
 #include <string>
 #include <fstream>
 #include <cstring>
@@ -30,6 +29,12 @@ Dict::Dict(string f)
         //cout << word[i] << endl;
         i++;
       }//while
+      copy(word.begin(), word.end(), inserter(sword, sword.end()));
+      /*for(set<string>::iterator count = sword.begin(); count
+          != sword.end(); count++)
+      {
+        cout << (*count) << endl;
+      }//for*/
       iss.clear();
     }//while
     fin.clear();
@@ -51,8 +56,8 @@ Dict::Dict(string f)
       //cout << sentence[j] << endl;
       j++;
     }//while
-    fin.clear();
-    fin.seekg(0);
+      copy(sentence.begin(), sentence.end(),
+            inserter(ssentence, ssentence.end()));
   }//if
   else
   {

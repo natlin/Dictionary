@@ -8,4 +8,5 @@
 7.created constructors for Phrase, Word, and Sentence with argument of string, stores the string into private data memeber base  
 8.edited the dict.cpp constructor to read in words to word vector  
 9.edited the dict.cpp constructor to read in sentences to sentence vector  
-10.
+10.created sets sword, sphrase, ssentence. Copies vector elements into sets  
+11.
