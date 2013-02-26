@@ -48,11 +48,13 @@ Dict::Dict(string f)
       }while (enter != static_cast<int>(string::npos));//while
       if(sentence[j][0] == ' ')
         sentence[j].replace(0, 1, "");
-      cout << sentence[j] << endl;
+      //cout << sentence[j] << endl;
       j++;
     }//while
-      cout << "blah" << endl;
-      cout << sentence[9] << endl;
+    fin.clear();
+    fin.seekg(0);
+    cout << "WORD" << i << endl;
+    cout << "SENTENCE" << j << endl;
   }//if
   else
   {
