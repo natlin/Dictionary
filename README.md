@@ -3,5 +3,8 @@
 2.created Element class and added supplied virtual void functions  
 3.created derived classes Phrase, Word, Sentence in their respective header files  
 4.added the inherited functions into the header files of derived classes  
-5.started off the .cpp files
+5.started off the .cpp files  
+6.added ifstream file(f.c\_str()); to dict.cpp to read the file. You need f.c\_str() because ifstream takes a char * as an argument, not a std::string  
+7.created constructors for Phrase, Word, and Sentence with argument of string  
+8.
 

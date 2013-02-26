@@ -2,6 +2,10 @@
 #include <string>
 #include "phrase.h"
 
+Phrase::Phrase(string s) : base(s)
+{
+}
+
 void Phrase::complete(const Dict &d)
 {
 }
