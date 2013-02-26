@@ -53,8 +53,6 @@ Dict::Dict(string f)
     }//while
     fin.clear();
     fin.seekg(0);
-    cout << "WORD" << i << endl;
-    cout << "SENTENCE" << j << endl;
   }//if
   else
   {
