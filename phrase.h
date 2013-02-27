@@ -12,6 +12,10 @@ class Phrase : public Element
     void show() const;
   private:
     string base;
+    set<string> temp;
+    string compare;
+    vector<string> vcomplete;
+    vector<string> vcheck;
 };//Phrase
 
 #endif

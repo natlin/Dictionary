@@ -12,6 +12,10 @@ class Sentence : public Element
     void show() const;
   private:
     string base;
+    string compare;
+    set<string> temp;
+    vector<string> vcomplete;
+    vector<string> vcheck;
 };//Sentence
 
 #endif

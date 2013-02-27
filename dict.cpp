@@ -90,3 +90,18 @@ Dict::Dict(string f)
     exit(1);
   }//else
 }//Dict(string f)
+
+set<string> Dict::getword() const
+{
+  return sword;
+}//getword
+
+set<string> Dict::getphrase() const
+{
+  return sphrase;
+}//getphrase
+
+set<string> Dict::getsentence() const
+{
+  return ssentence;
+}//getsentence

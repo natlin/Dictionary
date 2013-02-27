@@ -10,6 +10,10 @@ class Dict
 {
   public:
     Dict(string f);
+    set<string> getword() const;
+    set<string> getphrase() const;
+    set<string> getsentence() const;
+
   private:
     vector<string> word;
     vector<string> phrase;
