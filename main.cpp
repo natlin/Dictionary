@@ -19,7 +19,7 @@ int main()
   string str; 
   int len;
   
-  Dict d("datafull.txt");
+  Dict d("data.txt");
   
   while (!cin.eof()) {
 
