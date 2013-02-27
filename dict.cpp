@@ -77,6 +77,7 @@ Dict::Dict(string f)
       if(sentence[j][0] == ' ')
         sentence[j].replace(0, 1, "");
       //cout << sentence[j] << endl;
+      sentence[j].append(".");
       j++;
     }//while
     copy(sentence.begin(), sentence.end(),
