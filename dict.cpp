@@ -57,9 +57,9 @@ Dict::Dict(string f)
         word[clear].erase(length);
     }//for
     copy(word.begin(), word.end(), inserter(sword, sword.end()));
-    cout << sword.size() << endl;
+    //cout << sword.size() << endl;
     copy(phrase.begin(), phrase.end(), inserter(sphrase, sphrase.end()));
-    cout << sphrase.size() << endl;
+    //cout << sphrase.size() << endl;
     fin.clear();
     fin.seekg(0);
     int enter, j = 0;
@@ -78,11 +78,13 @@ Dict::Dict(string f)
         sentence[j].replace(0, 1, "");
       //cout << sentence[j] << endl;
       sentence[j].append(".");
+      if(sentence[j][0] == '.')
+        sentence[j] = sentence[0];
       j++;
     }//while
     copy(sentence.begin(), sentence.end(),
           inserter(ssentence, ssentence.end()));
-    cout << ssentence.size() << endl;
+    //cout << ssentence.size() << endl;
   }//if
   else
   {
