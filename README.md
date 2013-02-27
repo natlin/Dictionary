@@ -9,4 +9,5 @@
 8.edited the dict.cpp constructor to read in words to word vector  
 9.edited the dict.cpp constructor to read in sentences to sentence vector  
 10.created sets sword, sphrase, ssentence. Copies vector elements into sets  
-11.
+11.edited dict.cpp constructor to get phrases. Copies phrases into set  
+12.

@@ -14,7 +14,7 @@ Dict::Dict(string f)
   if(fin.is_open())
   {
     //cout << "File opened" << endl;
-    string str, token;
+    string str, token, temp;
     stringstream iss;
     int length, i = 0;
     while(getline(fin, str))
@@ -23,13 +23,9 @@ Dict::Dict(string f)
       while(getline(iss, token, ' '))
       {
         word.push_back(token);
-        length = word[i].length() - 1;
-        if(word[i][length] == '.')
-          word[i].erase(length);
         //cout << word[i] << endl;
         i++;
       }//while
-      copy(word.begin(), word.end(), inserter(sword, sword.end()));
       /*for(set<string>::iterator count = sword.begin(); count
           != sword.end(); count++)
       {
@@ -37,6 +33,33 @@ Dict::Dict(string f)
       }//for*/
       iss.clear();
     }//while
+    for(int remove = i; remove > 0; remove--)
+    {
+      temp = word[i - remove];
+      for(int add = 1; add < 5; add++)
+      {
+        if(temp[temp.length() - 1] == '.')
+          break;
+        temp = temp + " " + word[(i - remove) + add];
+        if(temp[temp.length() - 1] == '.')
+        {
+          temp.erase(temp.length() - 1);
+          phrase.push_back(temp);
+          break;
+        }//if
+        phrase.push_back(temp);
+      }//for
+    }//for
+    for(int clear = 0; clear < i; clear++)
+    {
+      length = word[clear].length() - 1;
+      if(word[clear][length] == '.')
+        word[clear].erase(length);
+    }//for
+    copy(word.begin(), word.end(), inserter(sword, sword.end()));
+    cout << sword.size() << endl;
+    copy(phrase.begin(), phrase.end(), inserter(sphrase, sphrase.end()));
+    cout << sphrase.size() << endl;
     fin.clear();
     fin.seekg(0);
     int enter, j = 0;
@@ -56,8 +79,9 @@ Dict::Dict(string f)
       //cout << sentence[j] << endl;
       j++;
     }//while
-      copy(sentence.begin(), sentence.end(),
-            inserter(ssentence, ssentence.end()));
+    copy(sentence.begin(), sentence.end(),
+          inserter(ssentence, ssentence.end()));
+    cout << ssentence.size() << endl;
   }//if
   else
   {
