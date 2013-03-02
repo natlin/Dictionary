@@ -62,10 +62,10 @@ void Sentence::check(const Dict &d)
     basecheck = base;
     if(compare.length() > basecheck.length())
       while(compare.length() > basecheck.length())
-        basecheck.append(" ");
+        basecheck.append("@");
     else if(basecheck.length() > compare.length())
       while(basecheck.length() > compare.length())
-        compare.append(" ");
+        compare.append("@");
     count = 0;
     for(int i = 0; i < static_cast<int>(basecheck.length()); i++)
     {
