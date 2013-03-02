@@ -19,7 +19,7 @@ void Phrase::complete(const Dict &d)
     {
       if(compare[i] == base[i])
       {
-        if(i == (base.length() - 1))
+        if(i == static_cast<int>(base.length() - 1))
           vcomplete.push_back(compare);
       }
       else
@@ -116,8 +116,9 @@ void Phrase::show() const
 
   for(int i = 0; i < static_cast<int>(vcomplete.size()) && i < 10; i++)
     cout << vcomplete[i] << endl;
+  cout << endl;
 
-  cout << "\n" << "PHRASE correction for: " << base << endl;
+  cout << "PHRASE correction for: " << base << endl;
   cout << "------------------------------" << endl;
 
   for(int i = 0; i < static_cast<int>(vcheck.size()) && i < 10; i++)
