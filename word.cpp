@@ -122,4 +122,5 @@ void Word::show() const
 
   for(int i = 0; i < static_cast<int>(vcheck.size()) && i < 10; i++)
     cout << vcheck[i] << endl;
+  cout << endl;
 }//show
