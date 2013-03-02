@@ -11,4 +11,4 @@
 10.created sets sword, sphrase, ssentence. Copies vector elements into sets  
 11.edited dict.cpp constructor to get phrases. Copies phrases into set  
 12.completed complete for words, phrases, and sentences  
-13.
+13.completed check for words, phrases, and sentences  

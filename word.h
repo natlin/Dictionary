@@ -12,10 +12,13 @@ class Word : public Element
     void show() const;
   private:
     string base;
+    string basecheck;
     string compare;
     set<string> temp;
     vector<string> vcomplete;
     vector<string> vcheck;
+    vector<int> hamming;
+    int count;
 };//Word
 
 #endif

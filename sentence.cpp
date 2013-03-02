@@ -53,6 +53,60 @@ void Sentence::complete(const Dict &d)
 void Sentence::check(const Dict &d)
 {
   temp = d.getsentence();
+  int testing = 0;
+  set<string>::iterator it;
+  for(it = temp.begin(); it != temp.end(); it++)
+  {
+    vcheck.push_back(*it);
+    compare = vcheck[testing];
+    basecheck = base;
+    if(compare.length() > basecheck.length())
+      while(compare.length() > basecheck.length())
+        basecheck.append(" ");
+    else if(basecheck.length() > compare.length())
+      while(basecheck.length() > compare.length())
+        compare.append(" ");
+    count = 0;
+    for(int i = 0; i < static_cast<int>(basecheck.length()); i++)
+    {
+      if(basecheck[i] != compare[i])
+        count++;
+    }//for
+    hamming.push_back(count);
+    testing++;
+  }//for
+  int holder;
+  string swap;
+  for(int i = 0; i < static_cast<int>(hamming.size()); i++)
+  {
+    for(int j = i; j < static_cast<int>(hamming.size()); j++)
+    {
+      if(hamming[i] > hamming[j])
+      {
+        holder = hamming[i];
+        swap = vcheck[i];
+        hamming[i] = hamming[j];
+        vcheck[i] = vcheck[j];
+        hamming[j] = holder;
+        vcheck[j] = swap;
+      }//if
+    }//for
+  }//for
+  for(int i = 0; i < static_cast<int>(hamming.size()); i++)
+  {
+    for(int j = i; j < static_cast<int>(hamming.size()); j++)
+    {
+      if(hamming[i] == hamming[j])
+      {
+        if(vcheck[i] > vcheck[j])
+        {
+          swap = vcheck[i];
+          vcheck[i] = vcheck[j];
+          vcheck[j] = swap;
+        }//if
+      }//if
+    }//for
+  }//for
 }//check
 
 void Sentence::show() const
@@ -65,4 +119,7 @@ void Sentence::show() const
 
   cout << "\n" << "SENTENCE correction for: " << base << endl;
   cout << "------------------------------" << endl;
+
+  for(int i = 0; i < static_cast<int>(vcheck.size()) && i < 10; i++)
+    cout << vcheck[i] << endl;
 }//show

@@ -91,6 +91,7 @@ Dict::Dict(string f)
     cout << "File could not be opened." << endl;
     exit(1);
   }//else
+  fin.close();
 }//Dict(string f)
 
 set<string> Dict::getword() const
