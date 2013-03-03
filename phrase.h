@@ -2,7 +2,7 @@
   #define PHRASE_H
 
 #include "element.h"
-
+#include <utility>
 class Phrase : public Element
 {
   public:
@@ -18,6 +18,7 @@ class Phrase : public Element
     vector<string> vcomplete;
     vector<string> vcheck;
     vector<int> hamming;
+    set<pair<int, string> > checksort;
     int count;
 };//Phrase
 

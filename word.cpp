@@ -73,9 +73,11 @@ void Word::check(const Dict &d)
         count++;
     }//for
     hamming.push_back(count);
+    pair<int, string> p1(hamming[testing], vcheck[testing]);
+    checksort.insert(p1);
     testing++;
   }//for
-  int holder;
+  /*int holder;
   string swap;
   for(int i = 0; i < static_cast<int>(hamming.size()); i++)
   {
@@ -106,7 +108,7 @@ void Word::check(const Dict &d)
         }//if
       }//if
     }//for
-  }//for
+  }//for*/
 }//check
 
 void Word::show() const
@@ -120,8 +122,16 @@ void Word::show() const
 
   cout << "WORD correction for: " << base << endl;
   cout << "------------------------------" << endl;
-
-  for(int i = 0; i < static_cast<int>(vcheck.size()) && i < 10; i++)
-    cout << vcheck[i] << endl;
+  int i = 0;
+  pair<int, string> p1;
+  set<pair<int,string> >::iterator it;
+  for(it = checksort.begin(); it != checksort.end() && i < 10; it++)
+  {
+    p1 = *it;
+    cout << p1.second << endl;
+    i++;
+  }//for
+  /*for(int i = 0; i < static_cast<int>(vcheck.size()) && i < 10; i++)
+    cout << vcheck[i] << endl;*/
   cout << endl;
 }//show

@@ -18,6 +18,7 @@ class Word : public Element
     vector<string> vcomplete;
     vector<string> vcheck;
     vector<int> hamming;
+    set<pair<int, string> > checksort;
     int count;
 };//Word
 
