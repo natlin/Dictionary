@@ -135,3 +135,6 @@ void Phrase::show() const
     cout << vcheck[i] << endl;*/
   cout << endl;
 }//show
+
+Phrase:: ~Phrase() {
+	};

@@ -135,3 +135,6 @@ void Sentence::show() const
     cout << vcheck[i] << endl;*/
   cout << endl;
 }//show
+
+Sentence:: ~Sentence(){
+	};

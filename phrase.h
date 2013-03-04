@@ -10,6 +10,7 @@ class Phrase : public Element
     void complete(const Dict &d);
     void check(const Dict &d);
     void show() const;
+    ~Phrase();
   private:
     string base;
     string basecheck;

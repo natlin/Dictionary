@@ -10,6 +10,7 @@ class Word : public Element
     void complete(const Dict &d);
     void check(const Dict &d);
     void show() const;
+    ~Word();
   private:
     string base;
     string basecheck;

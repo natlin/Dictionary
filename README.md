@@ -13,4 +13,5 @@
 12.completed complete for words, phrases, and sentences  
 13.completed check for words, phrases, and sentences, used an '@' for padding 
 the hamming distance because a ' ' could be part of a phrase or sentence  
-14.changed check and made the program faster by removing the two sorts at the end and turning it into a set<pair<int, string > >.  by doing so, we do not need to go through the entire phrases vector two extra times  
+14.changed check and made the program faster by removing the two sorts at the end and turning it into a set<pair<int, string > >.  by doing so, we do not need to go through the entire phrases vector two extra times 
+15.added destructors for dict, word, phrase and sentence   

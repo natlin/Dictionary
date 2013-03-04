@@ -13,6 +13,7 @@ class Dict
     set<string> getword() const;
     set<string> getphrase() const;
     set<string> getsentence() const;
+    ~Dict();
 
   private:
     vector<string> word;

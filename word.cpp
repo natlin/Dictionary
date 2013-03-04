@@ -135,3 +135,6 @@ void Word::show() const
     cout << vcheck[i] << endl;*/
   cout << endl;
 }//show
+
+Word:: ~Word() {
+	};

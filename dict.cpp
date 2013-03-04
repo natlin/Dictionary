@@ -108,3 +108,6 @@ set<string> Dict::getsentence() const
 {
   return ssentence;
 }//getsentence
+
+Dict:: ~Dict(){
+	};

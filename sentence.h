@@ -10,6 +10,7 @@ class Sentence : public Element
     void complete(const Dict &d);
     void check(const Dict &d);
     void show() const;
+    ~Sentence();
   private:
     string base;
     string basecheck;
